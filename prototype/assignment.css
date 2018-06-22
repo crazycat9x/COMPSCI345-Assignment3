@@ -1,0 +1,39 @@
+.assignment-button {
+    width: 100%;
+}
+
+.question-card {
+    height: 266px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px 0 rgba(60, 64, 67, .08), 0 1px 3px 1px rgba(60, 64, 67, .16);
+    padding: 1rem;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.answer-card {
+    height: 200px;
+    width: 100%;
+    outline: none;
+    resize: none;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #E2E2E2;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.assignment-button {
+    width: 100%;
+}
+
+.question-button,
+.submit-button {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.submit-button {
+    background-color: #02d1b2;
+}

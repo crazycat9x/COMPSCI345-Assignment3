@@ -1,0 +1,42 @@
+.calendar {
+  display: grid;
+  height: calc(100% - 65px);
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.calendar-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-month.calendar-year {
+  text-align: center;
+  font-weight: bold;
+}
+.day{
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.day:hover {
+  background-color: #F7F7F7;
+}
+
+.day.current {
+  background-color: #03a9f4;
+  color: #FFFFFF
+}
+
+.day.empty {
+  background-color: transparent;
+}
+
+.day.urgent {
+  text-decoration: underline #f44336;
+}
+
+.day.impor {
+  text-decoration: underline #ffeb3b;
+}

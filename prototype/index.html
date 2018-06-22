@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="chat.css">
+    <link rel="stylesheet" type="text/css" href="assignment.css" />
+    <link rel="stylesheet" type="text/css" href="discussion.css" />
+    <link rel="stylesheet" type="text/css" href="calendar.css" />
+
+    <title>StudyIt</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-title">
+                <h2>StudyIT</h2>
+            </div>
+            <ul class="sidebar-items">
+                <li class="sidebar-item active" onclick="switchPage(this,'#dashboard')">
+                    <i class="fas fa-home fa-fw fa-2x"></i>Dashboard</li>
+                <li class="sidebar-item">
+                    <i class="far fa-calendar-alt fa-fw fa-2x"></i>Calendar</li>
+                <li class="sidebar-item">
+                    <i class="fas fa-bullhorn fa-fw fa-2x"></i>Announcements</li>
+                <li class="sidebar-item" onclick="switchPage(this,'#assignment')">
+                    <i class="fas fa-book fa-fw fa-2x"></i>Assignments</li>
+                <li class="sidebar-item" onclick="switchPage(this,'#chat')">
+                    <i class="far fa-comments fa-fw fa-2x"></i>Chat</li>
+                <li id="specialTarget" class="sidebar-item" onclick="switchPage(this,'#discussion')">
+                    <i class="fas fa-clipboard-list fa-fw fa-2x"></i>Discussions</li>
+            </ul>
+        </nav>
+        <div class="container-fluid">
+            <ul id="nav-bar">
+                <li>
+                    <span style="cursor:pointer;">
+                        <i class="far fa-bell fa-fw fa-2x"></i>
+                    </span>
+                </li>
+                <li>
+                    <span style="cursor:pointer;">
+                        <i class="fas fa-sign-out-alt fa-fw fa-2x"></i>
+                    </span>
+                </li>
+            </ul>
+
+            <!-- Home page -->
+            <div id="dashboard" class="page">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card-section">
+                            <div class="card-title-alt">
+                                <h4 style="margin-bottom: 0px;">Announcements</h4>
+                                <h7>Please read all announcements</h7>
+                            </div>
+                            <ul class="card-ver-scroll">
+                                <li class="card-list-item urgent">
+                                    <div class="card-list-item-head">Assignment specs change</div>
+                                    <div class="card-list-item-cont">Question 5 have been removed</div>
+                                </li>
+                                <li class="card-list-item impor">
+                                    <div class="card-list-item-head">Muffin sweet pie</div>
+                                    <div class="card-list-item-cont">Topping lemon drops tart halvah marshmallow soufflé</div>
+                                </li>
+                                <li class="card-list-item">
+                                    <div class="card-list-item-head">Lemon drops chocolate</div>
+                                    <div class="card-list-item-cont">Chocolate cake lemon drops halvah cake macaroon icing muffin</div>
+                                </li>
+                                <li class="card-list-item urgent">
+                                    <div class="card-list-item-head">Cheesecake croissant</div>
+                                    <div class="card-list-item-cont">Tart toffee macaroon cotton candy sesame snaps cake. I love jujubes tart donut jelly-o bear claw dessert</div>
+                                </li>
+                                <li class="card-list-item impor">
+                                    <div class="card-list-item-head">I love bear claw marshmallow</div>
+                                    <div class="card-list-item-cont">Powder danish pudding sweet croissant gingerbread macaroon</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-section">
+                            <div class="card-title calendar-month calendar-year">
+                                <h4>May</h4>
+                                <h7>2018</h7>
+                            </div>
+                            <div class="calendar">
+                                <div class="calendar-row week-header">
+                                    <div class="day-of-week">S</div>
+                                    <div class="day-of-week">M</div>
+                                    <div class="day-of-week">T</div>
+                                    <div class="day-of-week">W</div>
+                                    <div class="day-of-week">T</div>
+                                    <div class="day-of-week">F</div>
+                                    <div class="day-of-week">S</div>
+                                </div>
+
+                                <div class="calendar-row week">
+                                    <div class="day empty"></div>
+                                    <div class="day empty"></div>
+                                    <div class="day">1</div>
+                                    <div class="day">2</div>
+                                    <div class="day">3</div>
+                                    <div class="day">4</div>
+                                    <div class="day">5</div>
+                                    <div class="day">6</div>
+                                    <div class="day">7</div>
+                                    <div class="day">8</div>
+                                    <div class="day">9</div>
+                                    <div class="day">10</div>
+                                    <div class="day">11</div>
+                                    <div class="day">12</div>
+                                    <div class="day urgent">13</div>
+                                    <div class="day">14</div>
+                                    <div class="day">15</div>
+                                    <div class="day current">16</div>
+                                    <div class="day">17</div>
+                                    <div class="day">18</div>
+                                    <div class="day">19</div>
+                                    <div class="day impor">20</div>
+                                    <div class="day">21</div>
+                                    <div class="day">22</div>
+                                    <div class="day">23</div>
+                                    <div class="day">24</div>
+                                    <div class="day urgent">25</div>
+                                    <div class="day">26</div>
+                                    <div class="day">27</div>
+                                    <div class="day">28</div>
+                                    <div class="day">29</div>
+                                    <div class="day">30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card-section">
+                            <div class="card-title">
+                                <h4>Messages</h4>
+                                <h7>Current conversation</h7>
+                            </div>
+                            <ul class="card-ver-scroll">
+                                <li class="card-list-item">
+                                    <img class='user' src='dummy-user.jpg' />
+                                    <div class="card-list-item-head">General</div>
+                                    <div class="card-list-item-cont">You: Candy jelly-o bonbon cotton candy. Brownie apple pie jelly-o sugar plum jelly toffee
+                                        dessert lemon drops</div>
+                                </li>
+                                <li class="card-list-item">
+                                    <img class='user' src='dummy-user.jpg' />
+                                    <div class="card-list-item-head">Assignment 1</div>
+                                    <div class="card-list-item-cont">Tangelo Michelangelo: Hey guys, I just finished the assignment, anyone needed help just
+                                        leave a message. Cheers</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-section">
+                            <div class="card-title">
+                                <h4>Assignments</h4>
+                                <h7>Assignments in progress</h7>
+                            </div>
+                            <ul class="card-ver-scroll">
+                                <li class="card-list-item">
+                                    <div class="card-list-item-head">Assignment 1</div>
+                                    <div class="card-list-item-cont">Movement of modern art from Renaissance to Contemporary Art.</div>
+                                    <div class="sub-info">Worth 10%</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-section">
+                            <div class="card-title">
+                                <h4>Reading list</h4>
+                                <h7>Recommended reading materials</h7>
+                            </div>
+                            <ul class="card-ver-scroll">
+                                <li class="card-list-item">
+                                    <div class="card-list-item-head">The Art of Mondo</div>
+                                    <div class="card-list-item-cont sub-info">by Brad Bird</div>
+                                </li>
+                                <li class="card-list-item">
+                                    <div class="card-list-item-head">A Yorkshire Sketchbook</div>
+                                    <div class="card-list-item-cont sub-info">by David Hockney</div>
+                                </li>
+                                <li class="card-list-item">
+                                    <div class="card-list-item-head">The Impossible Collection of Warhol</div>
+                                    <div class="card-list-item-cont sub-info">by Andy Warhol</div>
+                                </li>
+                                <li class="card-list-item">
+                                    <div class="card-list-item-head">The Paintings of Paul Cezanne</div>
+                                    <div class="card-list-item-cont sub-info">by John Rewald</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat page -->
+            <div id="chat" class="row page" style="display:none;">
+                <div class="col-md-3 chat-search">
+                    <div class="chat-heading">
+                        <span id="chat-search-bar-wrapper">
+                            <i class="fas fa-search fa-fw" style="color:#999;"></i>
+                            <input type="text" id="chat-search-bar" placeholder="Search messages" />
+                        </span>
+                    </div>
+                    <ul class="list-unstyled chat-groups">
+                    </ul>
+                </div>
+                <div class="col-md-9 chat-convo">
+                    <div class="chat-heading chat-current">
+                    </div>
+                    <div class="chat-messages-wrapper">
+                    </div>
+                    <div class="chat-input-section">
+                        <textarea id="chat-input" placeholder="Type a message..." onkeypress="if(event.keyCode == 13){event.preventDefault();sendMessage()}"></textarea>
+                        <button id="chat-input-submit" onclick="sendMessage();">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignment -->
+            <div id="assignment" class="page" style="display:none;">
+                <div class="step row">
+                    <div class="col-md-4">
+                        <div class="card-section next" style="height:auto;cursor:pointer;">
+                            <div class="card-title">
+                                <h4>Assignment 1</h4>
+                                <h7>Movement of modern art from Renaissance to Contemporary Art.</h7>
+                            </div>
+                            <ul class="card-ver-scroll">
+                                <li class="card-list-item">
+                                    <div class="card-list-item-head">Due 23 May at 15:00</div>
+                                    <div class="card-list-item-cont">Open</div>
+                                    <div class="card-list-item-cont">Worth 10%</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-section next" style="height:auto;cursor:pointer;">
+                            <div class="card-title">
+                                <h4>Assignment 2</h4>
+                                <h7>The important of art in society</h7>
+                            </div>
+                            <ul class="card-ver-scroll">
+                                <li class="card-list-item">
+                                    <div class="card-list-item-head">Due 5 June at 15:00</div>
+                                    <div class="card-list-item-cont">Not yet available</div>
+                                    <div class="card-list-item-cont">Worth 10%</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="step row" style="display: none;">
+                    <div class="col-md-12">
+                        <h3 class="heading">Assignment Specification</h3>
+                        <h5 class="heading">Movement of modern art from Renaissance to Contemporary Art.</h5>
+                        <p>Pudding candy canes toffee bear claw fruitcake marzipan dragée topping lemon drops. Cake bear claw
+                            jelly-o jujubes icing caramels. Gummies gummies dragée ice cream carrot cake. Candy canes dessert
+                            oat cake bear claw. Topping pastry toffee chocolate cake chocolate bar halvah macaroon sugar
+                            plum chupa chups. Ice cream cheesecake dragée pie jujubes tootsie roll wafer cheesecake tart.
+                            Tart caramels toffee sweet.</p>
+                        <p>Jujubes marshmallow sweet roll lollipop sugar plum gingerbread candy canes cake. Biscuit donut chocolate
+                            muffin pastry sugar plum brownie chocolate cupcake. Jujubes chocolate cake bear claw sesame snaps
+                            cotton candy candy donut. Chocolate cake muffin jelly-o candy sugar plum wafer gingerbread cotton
+                            candy. Cheesecake sesame snaps cheesecake. Bear claw pudding powder danish dragée.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="assignment-button prev">Previous</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="assignment-button question-button next">Next</button>
+                    </div>
+                    <textarea style="display: none;" class="answer-card">temp</textarea>
+                </div>
+                <div class="step" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="heading">Question 1 - Assignment 1</h3>
+                            <div class="question-card">
+                                <p>Arts are an essential part of any country's culture. Write a short essay stating your personal
+                                    opinion whether art should be funded through voluntary means or should it run under the
+                                    free market.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="heading">Write your answer here</h5>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <textarea class="answer-card"></textarea>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="question-button next">Next</button>
+                            <button class="question-button prev">Previous</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="heading">Question 2 - Assignment 1</h3>
+                            <div class="question-card">
+                                <p>Danish cake macaroon tootsie roll jelly beans muffin biscuit. Ice cream croissant biscuit.
+                                    Gingerbread candy fruitcake cupcake gummies cotton candy. I love cheesecake oat cake.
+                                    Carrot cake cookie caramels candy pie sugar plum cotton candy. Macaroon I love I love
+                                    macaroon. Pastry brownie powder sugar plum jelly beans cake I love. Tart pastry liquorice
+                                    marshmallow macaroon I love bonbon.</p>
+                                <p>Croissant croissant caramels danish tiramisu biscuit I love cheesecake candy. Caramels chocolate
+                                    I love icing jelly wafer apple pie cake danish. Soufflé tiramisu chocolate. I love jujubes
+                                    cake dragée I love. I love sweet toffee. Brownie I love sugar plum cake oat cake I love
+                                    tootsie roll. Dragée caramels danish. Donut I love pie tart pastry. Chocolate cake I
+                                    love pie toffee sweet roll lollipop.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="heading">Write your answer here</h5>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <textarea class="answer-card"></textarea>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="submit-button" onclick="showModal()">Submit</button>
+                            <button class="question-button prev">Previous</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-wrapper">
+                    <div class="modal-box">
+                        <h5>Your submission will be submitted to the discussion thread</h5>
+                        <p>Feel free to join in the conversation thread and make edit as many times as you need before the due
+                            date
+                        </p>
+                        <div style="display:flex; justify-content:space-between;">
+                            <button class="modal-button-undo" onclick="hideModal()">I need to make edit</button>
+                            <button class="modal-button" onclick="hideModal(navStep('.step',0,0))">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discussion -->
+            <div id="discussion" class="page" style="display:none;">
+                <div class="card-section d-step">
+                    <div class="card-title">
+                        <h4>Discussion threads</h4>
+                        <h7>Select a thread to view and leave comment</h7>
+                    </div>
+                    <div>
+                        <ul class="card-ver-scroll">
+                            <li class="card-list-item" onclick="navStep('.d-step', 1, 0)">
+                                <div class="card-list-item-head">Assignment 1 - question 1</div>
+                                <div class="card-list-item-cont">The important of art</div>
+                                <div class="card-list-item-cont">
+                                    <a class="sub-info">32 comments</a>
+                                </div>
+                            </li>
+                            <li class="card-list-item" onclick="navStep('.d-step', 2, 0)">
+                                <div class="card-list-item-head">Assignment 1 - question 2</div>
+                                <div class="card-list-item-cont">Question 5 have been removed</div>
+                                <div class="card-list-item-cont">
+                                    <a class="sub-info">12 comments</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-section d-step" id="discussion1" style="display:none;">
+                    <div class="card-title">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a class="arrow-back-button" onclick="navStep('.d-step', 0, 0)">
+                                        <i class="fas fa-angle-left fa-fw fa-2x"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <h4>Question 1</h4>
+                                    <h7>Of assignment 1</h7>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="discussion-tab-wrapper">
+                        </table>
+                    </div>
+                </div>
+                <div class="card-section d-step" id="discussion2" style="display:none;">
+                    <div class="card-title">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a class="arrow-back-button" onclick="navStep('.d-step', 0, 0)">
+                                        <i class="fas fa-angle-left fa-fw fa-2x"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <h4>Question 2</h4>
+                                    <h7>Of assignment 1</h7>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="discussion-tab-wrapper">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+</body>
+
+</html>
